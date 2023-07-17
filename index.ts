@@ -98,7 +98,9 @@ class MainLevel extends Phaser.Scene {
     super({ key: 'MainLevel' });
   }
 
-  preload() {}
+  preload() {
+    this.load.baseURL="/Poofmaster/void12345/deployments/activity_log?environment=github-pages"
+  }
 
   create() {}
 
