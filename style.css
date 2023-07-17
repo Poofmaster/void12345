@@ -8,9 +8,9 @@ html {
 }
 
 body {
-  background: -moz-linear-gradient(top, #1f7373, #75a62d);
-  background: -webkit-linear-gradient(top, #FFFFO, #75a62d);
-  background: linear-gradient(top, #1f7373, #75a62d);
+  background: -moz-linear-gradient(top, #ffff00, #00f);
+  background: -webkit-linear-gradient(top, #ffff00, #00f);
+  background: linear-gradient(top, #ffff00, #00f);
   text-align: center;
 }
 
