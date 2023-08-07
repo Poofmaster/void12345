@@ -84,7 +84,7 @@ class SplashLevel extends Phaser.Scene {
     });
 
     setTimeout(() => {
-      //this.scene.start('MainLevel');
+      this.scene.start('MainLevel');
     }, 2000);
   }
 
@@ -99,7 +99,7 @@ class MainLevel extends Phaser.Scene {
   }
 
   preload() {
-    this.load.baseURL="/Poofmaster/void12345/deployments/activity_log?environment=github-pages"
+    this.load.baseURL="https://poofmaster.github.io/void12345/"
   }
 
   create() {}
