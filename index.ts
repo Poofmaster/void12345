@@ -12,8 +12,7 @@ class BootLevel extends Phaser.Scene {
   preload() {
     // CHANGE BASE URL!!!!
     this.add.text(20, 20, 'Boot Sequence Initiated.');
-    this.load.baseURL =
-      'https://Poofmaster.github.io/void12345/';
+    this.load.baseURL = 'https://Poofmaster.github.io/void12345/';
     this.load.bitmapFont({
       key: 'Oswald',
       textureURL: 'static/assets/font/OswaldLightRed.png',
@@ -54,8 +53,12 @@ class SplashLevel extends Phaser.Scene {
     });
 
     /* START PRELOAD ITEMS */
+    this.load.spritesheet('player', 'static/assets/player.png', {
+      frameWidth: 32,
+      frameHeight: 32,
+    });
 
-    /* END PRELOAD ITEMS */
+    this.load.animation('playeranimis', './static/assets/playeranimis.json');
   }
   private logo: Phaser.GameObjects.Image;
   private companyLine1: Phaser.GameObjects.BitmapText;
@@ -99,10 +102,13 @@ class MainLevel extends Phaser.Scene {
   }
 
   preload() {
-    this.load.baseURL="https://poofmaster.github.io/void12345/"
+    this.load.baseURL = 'https://poofmaster.github.io/void12345/';
   }
 
-  create() {}
+  create() {
+    const player = this.physics.add.sprite(100, 200, 'player', 0);
+    player.anims.play('playerblinking'); // notice the key for animation
+  }
 
   update() {}
 }
