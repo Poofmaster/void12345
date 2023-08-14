@@ -55,8 +55,8 @@ class SplashLevel extends Phaser.Scene {
     /* START PRELOAD ITEMS */
     this.load.baseURL = 'https://poofmaster.github.io/void12345/';
     this.load.spritesheet('player', 'static/assets/player.png', {
-      frameWidth: 32,
-      frameHeight: 32,
+      frameWidth: 170,
+      frameHeight: 200,
     });
 
     this.load.animation('playeranimis', 'static/assets/playeranimis.json');
@@ -107,7 +107,7 @@ class MainLevel extends Phaser.Scene {
   }
 
   create() {
-    const player = this.physics.add.sprite(0, 0, 'player');
+    const player = this.physics.add.sprite(200, 200, 'player');
     player.anims.play('playerblinking'); // notice the key for animation
   }
 
@@ -122,7 +122,7 @@ const config = {
   type: Phaser.AUTO,
   width: 400,
   height: 400,
-  backgroundColor: '0x000',
+  backgroundColor: '0x000000',
   physics: {
     default: 'arcade',
     arcade: {
