@@ -53,12 +53,13 @@ class SplashLevel extends Phaser.Scene {
     });
 
     /* START PRELOAD ITEMS */
+    this.load.baseURL = 'https://poofmaster.github.io/void12345/';
     this.load.spritesheet('player', 'static/assets/player.png', {
       frameWidth: 32,
       frameHeight: 32,
     });
 
-    this.load.animation('playeranimis', './static/assets/playeranimis.json');
+    this.load.animation('playeranimis', 'static/assets/playeranimis.json');
   }
   private logo: Phaser.GameObjects.Image;
   private companyLine1: Phaser.GameObjects.BitmapText;
@@ -106,7 +107,7 @@ class MainLevel extends Phaser.Scene {
   }
 
   create() {
-    const player = this.physics.add.sprite(100, 200, 'player', 0);
+    const player = this.physics.add.sprite(0, 0, 'player');
     player.anims.play('playerblinking'); // notice the key for animation
   }
 
