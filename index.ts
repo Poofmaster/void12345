@@ -54,9 +54,9 @@ class SplashLevel extends Phaser.Scene {
 
     /* START PRELOAD ITEMS */
     this.load.baseURL = 'https://poofmaster.github.io/void12345/';
-    this.load.spritesheet('player', 'static/assets/player.png', {
-      frameWidth: 170,
-      frameHeight: 200,
+    this.load.spritesheet('player', 'static/assets/player-v2.png', {
+      frameWidth: 10,
+      frameHeight: 13,
     });
 
     this.load.animation('playeranimis', 'static/assets/playeranimis.json');
